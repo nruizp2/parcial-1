@@ -59,7 +59,7 @@ function Auth(){
                     <button>Cancelar</button>
                 </div>
 
-                {error && <p>Error de autenticación, revise los credenciales</p>}
+                {error && <p style={{color:"red"}}>Error de autenticación, revise los credenciales</p>}
             </div>
         </div>
     )
