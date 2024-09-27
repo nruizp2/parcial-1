@@ -32,9 +32,9 @@ function Detail({id}){
     }
     
     return(
-        <div className="card" style={{height:"100%", width:"80%", alignItems:"center"}}>
+        <div className="card text-center" style={{height:"100%", width:"80%", alignItems:"center"}}>
             <div className="card-body" >
-                <h1>{robot.nombre}</h1>
+                <h1 className="card-title">{robot.nombre}</h1>
                 <img class="card-img" style={{height:"50%", width:"50%"}} src={robot.imagen + "?raw=true"}></img>
                 <p>Año de fabricación: {robot.añoFabricacion}</p>
                 <p>Capacidad de procesamiento: {robot.capacidadProcesamiento}</p>
