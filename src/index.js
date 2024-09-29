@@ -1,17 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import { IntlProvider } from "react-intl";
+import App from "./App.js";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import "./index.css"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import localeEsMessages from "./locales/es";
+import localeEnMessages from "./locales/en";
+
+import { createRoot } from 'react-dom/client';
+
+const messages = {
+  'es': localeEsMessages,
+  'en': localeEnMessages
+};
+
+const leng = navigator.language.split("-")[0]
+
+function Root() {
+  const [locale, setLocale] = useState((leng === "en" || leng === "es")? leng: "en");
+
+  const toggleLanguage = () => {
+    setLocale(prevLocale => (prevLocale === 'en' ? 'es' : 'en'));
+  };
+
+  return (
+    <IntlProvider locale={locale} messages={messages[locale]}>
+      <div>
+        <button className="butt-lang" onClick={toggleLanguage}>
+        {locale === 'en' ? 'Cambiar idioma a  Español' : 'Change language to English'}
+        </button>
+        <p>{!(locale === 'en') ? 'Idioma detectado' : 'Detected language'}: {navigator.language}</p>
+        <App />
+      </div>
+    </IntlProvider>
+  );
+}
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(<Root />);

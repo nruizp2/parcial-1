@@ -4,8 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { useNavigate } from "react-router-dom";
 import Detail from "./detail";
 
+import {FormattedMessage, useIntl} from 'react-intl';
+
 
 function List(){
+
+    const  intl = useIntl()
 
     const [robots, setRebots] = useState([]);
 
@@ -38,15 +42,15 @@ function List(){
     return(
         <div>
 
-            <div className="row">
+            <div className="row" style={{paddingLeft:"5%"}}>
                 <div className="col-6">
                     <table className="table">
                         <thead className="table-dark">
                             <tr>
-                                <th>ID</th>
-                                <th >Nombre</th>
-                                <th>Modelo</th>
-                                <th >Empresa fabricante</th>
+                                <th>{intl.formatMessage({id:"ID"})}</th>
+                                <th >{intl.formatMessage({id:"name"})}</th>
+                                <th>{intl.formatMessage({id:"model"})}</th>
+                                <th >{intl.formatMessage({id:"empresa"})}</th>
                             </tr>
                         </thead>
                         <tbody>

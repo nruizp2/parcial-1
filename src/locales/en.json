@@ -1,0 +1,17 @@
+{
+    "banner": "Adopt a Robot with Robot Lovers!",
+    "inicio" : "Login",
+    "user": "Username",
+    "pass" : "Password",
+    "butt-log": "Log In",
+    "error": "Authentication error. Check credentials",
+    "cancel": "Cancel",
+    "ID": "ID",
+    "name": "Name",
+    "model": "Model",
+    "empresa": "Manufacturer",
+    "añoFab": "Year of Manufacture",
+    "capacidad": "Processing Capacity",
+    "humor": "Mood",
+    "contact": "Contact us"
+}

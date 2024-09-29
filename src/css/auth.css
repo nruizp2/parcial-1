@@ -1,0 +1,52 @@
+.input-auth{
+    width: 100%;
+    margin: auto;
+    background-color: #d9d9d9;
+    height: 40px;
+}
+
+.input-text-auth{
+    font-weight: bold;
+    text-align: left;
+    margin-top: 15px;
+    
+}
+
+.div-auth{
+    display: grid;
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-bottom: 1%;
+    
+}
+
+.div-buttons-auth{
+    padding-bottom: 2%;
+    margin: auto;
+     display: flex;
+     justify-content: center;
+}
+
+.button-ingresar{
+    background-color: #083c94;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 180px;
+}
+
+.button-cancelar{
+    background-color: #e75c5e;
+    color: black;
+    font-weight: bold;
+    margin-left: 5%;
+    height: 40px;
+    width: 180px;
+}
+
+.error-text{
+    color:red;
+    font-weight: bold;
+    margin-top: 0%;
+    text-align: center;
+}
